@@ -174,8 +174,19 @@
   <script>
     const btn = document.getElementById('menu-btn');
     const sidebar = document.getElementById('sidebar');
+    const links = sidebar.querySelectorAll('a');
+
     btn.addEventListener('click', () => {
       sidebar.classList.toggle('-translate-x-full');
+    });
+
+    // Cierra el menú al tocar un enlace en móvil
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth < 768) {
+          sidebar.classList.add('-translate-x-full');
+        }
+      });
     });
   </script>
 
