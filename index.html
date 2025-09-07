@@ -21,11 +21,11 @@
 
   <!-- Botón menú móvil -->
   <div class="md:hidden fixed top-5 left-5 z-50">
-    <button id="menu-btn" class="text-white text-2xl">☰</button>
+    <button id="menu-btn" class="text-white text-3xl">☰</button>
   </div>
 
   <!-- Sidebar -->
-  <aside id="sidebar" class="fixed left-0 top-0 w-64 h-full bg-gray-800 shadow-lg p-6 overflow-y-auto transform -translate-x-full md:translate-x-0 transition-transform duration-300 z-40">
+  <aside id="sidebar" class="fixed left-0 top-0 w-64 h-full bg-gray-800 shadow-lg p-6 overflow-y-auto transform -translate-x-full md:translate-x-0 transition-transform duration-300 z-50">
     <h2 class="text-2xl font-bold text-purple-400 mb-6">📜 Secciones</h2>
     <nav class="space-y-3">
       <a href="#1" class="block hover:text-purple-300">1. Los orígenes</a>
@@ -165,4 +165,19 @@
     <!-- 9. Conclusión -->
     <section id="9">
       <h2 class="text-2xl sm:text-3xl font-bold text-purple-400 mb-4">9. Conclusión</h2>
-      <p class="text-gray-300">La historia de los videojuegos es un reflejo de cómo la tecnología, la creatividad y la cultura se entrelazan. Desde simples experimentos hasta mundos virtuales masivos, el gaming
+      <p class="text-gray-300">La historia de los videojuegos es un reflejo de cómo la tecnología, la creatividad y la cultura se entrelazan. Desde simples experimentos hasta mundos virtuales masivos, el gaming sigue evolucionando sin detenerse.</p>
+    </section>
+
+  </main>
+
+  <!-- Script menú móvil -->
+  <script>
+    const btn = document.getElementById('menu-btn');
+    const sidebar = document.getElementById('sidebar');
+    btn.addEventListener('click', () => {
+      sidebar.classList.toggle('-translate-x-full');
+    });
+  </script>
+
+</body>
+</html>
